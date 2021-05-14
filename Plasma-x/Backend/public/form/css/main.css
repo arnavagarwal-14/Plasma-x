@@ -9,6 +9,19 @@
 	font-family: "Poppins", "Arial", "Helvetica Neue", sans-serif;
 }
 
+.success{
+	display: flex;
+	align-items: center;
+	flex-flow: column;
+	justify-content: center;
+	padding: 200px 0 100px 0;
+}
+
+.success h1{
+	color: #fafafa;
+	padding-bottom: 50px;
+}
+
 /* ==========================================================================
    #GRID
    ========================================================================== */

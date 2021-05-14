@@ -10,7 +10,7 @@
     <meta name="keywords" content="Colorlib Templates">
 
     <!-- Title Page-->
-    <title>Volunteer Registration form</title>
+    <title>Register as donor</title>
 
     <!-- Icons font CSS-->
     <link href="vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
@@ -27,44 +27,44 @@
 </head>
 
 <body>
-    <div class="page-wrapper bg-gra-02 p-t-130 p-b-100 font-poppins volunteerformcolor">
+    <div class="page-wrapper bg-gra-02 p-t-130 p-b-100 font-poppins donorformcolor">
         <div class="wrapper wrapper--w680">
             <div class="card card-4">
                 <div class="card-body">
-                    <h2 class="title">Volunteer Registeration</h2>
-                    <form method="POST">
+                    <h2 class="title">Donor Registration Form</h2>
+                    <form method="POST" action="/donor">
                         <div class="row row-space">
                             <div class="col-2">
                                 <div class="input-group">
-                                    <label class="label">Volunteer Name</label>
-                                    <input class="input--style-4" type="text" name="first_name">
+                                    <label class="label">Donor Name</label>
+                                    <input class="input--style-4" type="text" name="dname">
                                 </div>
                             </div>
                             <div class="col-2">
                                 <div class="input-group">
                                     <label class="label">City</label>
-                                    <input class="input--style-4" type="text" name="City">
+                                    <input class="input--style-4" type="text" name="daddress">
                                 </div>
                             </div>
                         </div>
                         <div class="row row-space">
                             <div class="col-2">
                                 <div class="input-group">
-                                    <label class="label">Age </label>
-                                    <input class="input--style-4" type="text" name="Age">
+                                    <label class="label">Donor's Age </label>
+                                    <input class="input--style-4" type="text" name="age">
                                     
                                 </div>
                             </div>
                             <div class="col-2">
                                 <div class="input-group">
-                                    <label class="label">Past Volunteering Experience</label>
+                                    <label class="label">Gender</label>
                                     <div class="p-t-10">
-                                        <label class="radio-container m-r-45">Yes
-                                            <input type="radio" checked="checked" name="past">
+                                        <label class="radio-container m-r-45">Male
+                                            <input type="radio" checked="checked" name="dgender">
                                             <span class="checkmark"></span>
                                         </label>
-                                        <label class="radio-container">No
-                                            <input type="radio" name="past">
+                                        <label class="radio-container">Female
+                                            <input type="radio" name="dgender">
                                             <span class="checkmark"></span>
                                         </label>
                                     </div>
@@ -74,7 +74,7 @@
                         <div class="input-group">
                             <label class="label">Subject</label>
                             <div class="rs-select2 js-select-simple select--no-search">
-                                <select name="subject">
+                                <select name="dbloodgroup">
                                     <option disabled="disabled" selected="selected">Blood Group:</option>
                                     <option>AB+</option>
                                     <option>A+</option>
@@ -94,13 +94,13 @@
                             <div class="col-2">
                                 <div class="input-group">
                                     <label class="label">Email</label>
-                                    <input class="input--style-4" type="email" name="email">
+                                    <input class="input--style-4" type="email" name="demail">
                                 </div>
                             </div>
                             <div class="col-2">
                                 <div class="input-group">
                                     <label class="label">Phone Number</label>
-                                    <input class="input--style-4" type="text" name="phone">
+                                    <input class="input--style-4" type="text" name="dphone">
                                 </div>
                             </div>
                         </div>
@@ -124,7 +124,7 @@
     <!-- Main JS-->
     <script src="js/global.js"></script>
 
-</body><!-- This templates was made by Colorlib (https://colorlib.com) -->
+</body>
 
 </html>
 <!-- end document-->

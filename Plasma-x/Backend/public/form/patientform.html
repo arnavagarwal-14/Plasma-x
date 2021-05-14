@@ -32,18 +32,18 @@
             <div class="card card-4">
                 <div class="card-body">
                     <h2 class="title">Patient Registration Form</h2>
-                    <form method="POST">
+                    <form method="POST" action="/patient">
                         <div class="row row-space">
                             <div class="col-2">
                                 <div class="input-group">
                                     <label class="label">Patient Name</label>
-                                    <input class="input--style-4" type="text" name="first_name">
+                                    <input class="input--style-4" type="text" name="pname">
                                 </div>
                             </div>
                             <div class="col-2">
                                 <div class="input-group">
                                     <label class="label">City</label>
-                                    <input class="input--style-4" type="text" name="City">
+                                    <input class="input--style-4" type="text" name="paddress">
                                 </div>
                             </div>
                         </div>
@@ -51,7 +51,7 @@
                             <div class="col-2">
                                 <div class="input-group">
                                     <label class="label">Patient's Age </label>
-                                    <input class="input--style-4" type="text" name="City">
+                                    <input class="input--style-4" type="text" name="page">
                                     
                                 </div>
                             </div>
@@ -60,11 +60,11 @@
                                     <label class="label">Gender</label>
                                     <div class="p-t-10">
                                         <label class="radio-container m-r-45">Male
-                                            <input type="radio" checked="checked" name="gender">
+                                            <input type="radio" checked="checked" name="pgender">
                                             <span class="checkmark"></span>
                                         </label>
                                         <label class="radio-container">Female
-                                            <input type="radio" name="gender">
+                                            <input type="radio" name="pgender">
                                             <span class="checkmark"></span>
                                         </label>
                                     </div>
@@ -74,7 +74,7 @@
                         <div class="input-group">
                             <label class="label">Subject</label>
                             <div class="rs-select2 js-select-simple select--no-search">
-                                <select name="subject">
+                                <select name="pbloodgroup">
                                     <option disabled="disabled" selected="selected">Blood Group:</option>
                                     <option>AB+</option>
                                     <option>A+</option>
@@ -94,13 +94,13 @@
                             <div class="col-2">
                                 <div class="input-group">
                                     <label class="label">Email</label>
-                                    <input class="input--style-4" type="email" name="email">
+                                    <input class="input--style-4" type="email" name="pemail">
                                 </div>
                             </div>
                             <div class="col-2">
                                 <div class="input-group">
                                     <label class="label">Phone Number</label>
-                                    <input class="input--style-4" type="text" name="phone">
+                                    <input class="input--style-4" type="text" name="pphone">
                                 </div>
                             </div>
                         </div>
