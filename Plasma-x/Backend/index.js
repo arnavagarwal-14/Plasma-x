@@ -4,6 +4,7 @@ const app = express();
 const mysql = require("mysql");
 
 // parse application/json
+app.use(express.static('public'));
 app.use(bodyParser.urlencoded({extended: true}));
 
 //Create Database Connection
@@ -20,7 +21,11 @@ conn.connect((err)=>{
     }else{
         console.log("MYSQL connected");
     }
-})
+});
+
+app.get("/",(req,res)=>{
+	res.sendFile("./public/index.html");
+});
 
 //for donors
 app.get("/donor", (req, res) => {
@@ -28,6 +33,7 @@ app.get("/donor", (req, res) => {
 	let query = conn.query(sql, (err, result) => {
 		if (err) throw err;
 		res.send(result);
+		res.redirect("/");
 	});
 });
 
@@ -39,7 +45,7 @@ app.post("/donor", (req, res) => {
 	let sql = "INSERT INTO donor SET ?";
 	let query = conn.query(sql, data, (err, result) => {
 		if (err) throw err;
-		res.send(JSON.stringify({ status: 200, error: null, response: "New Record is Added successfully" }));
+		res.send(JSON.stringify({ status: 200, error: null, response: "New Donor is Added successfully" }));
 	});
 });
 
@@ -84,7 +90,7 @@ app.post("/patient", (req, res) => {
 	let sql = "INSERT INTO patient SET ?";
 	let query = conn.query(sql, data, (err, result) => {
 		if (err) throw err;
-		res.send(JSON.stringify({ status: 200, error: null, response: "New Record is Added successfully" }));
+		res.send(JSON.stringify({ status: 200, error: null, response: "New Patient is Added successfully" }));
 	});
 });
 
@@ -120,7 +126,7 @@ app.post("/volunteer", (req, res) => {
 	let sql = "INSERT INTO volunteer SET ?";
 	let query = conn.query(sql, data, (err, result) => {
 		if (err) throw err;
-		res.send(JSON.stringify({ status: 200, error: null, response: "New Record is Added successfully" }));
+		res.send(JSON.stringify({ status: 200, error: null, response: "New Volunteer is Added successfully" }));
 	});
 });
 
